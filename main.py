@@ -6,6 +6,7 @@ from logger import log_state
 from player import Player
 from asteroidfield import AsteroidField
 from logger import log_event
+from shot import Shot
 
 def main():
     x = SCREEN_WIDTH / 2
@@ -19,6 +20,8 @@ def main():
 
     AsteroidField.containers = (updatable)
     astrofield = AsteroidField()
+    shots = pygame.sprite.Group()
+    Shot.containers = (shots,drawable, updatable)
 
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))

@@ -32,8 +32,7 @@ class CircleShape(pygame.sprite.Sprite):
 
         self.radius = radius
 
-        self.x = x
-        self.y = y
+
 
 
     def draw(self, screen: pygame.Surface) -> None:
