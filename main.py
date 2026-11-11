@@ -38,6 +38,12 @@ def main():
             if event.type == pygame.QUIT:
                 return
         updatable.update(dt)
+        for asteroid_obj_get_shot in asteroids:
+            for shot_on_asteroid in shots:
+                if shot_on_asteroid.collides_with(asteroid_obj_get_shot):
+                    log_event("asteroid_shot")
+                    shot_on_asteroid.kill()
+                    asteroid_obj_get_shot.kill()
         for asteroid_obj in asteroids:
            if asteroid_obj.collides_with(player):
                log_event("player_hit")
