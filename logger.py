@@ -1,15 +1,8 @@
 import inspect
-
 import json
-
 import math
-
 from datetime import datetime
-
 from typing import NotRequired, TypedDict
-
-
-
 
 
 class SpriteInfo(TypedDict):
@@ -25,16 +18,11 @@ class SpriteInfo(TypedDict):
     rot: NotRequired[float]
 
 
-
-
-
 class GroupInfo(TypedDict):
 
     count: int
 
     sprites: list[SpriteInfo]
-
-
 
 
 
